@@ -20,9 +20,8 @@ public class Atividade {
     @JoinColumn(name = "categoria_id")
     private Categoria categoria;
 
-
     @OneToMany(mappedBy = "atividade")
-    private List<Atividade> atividades = new ArrayList<>();
+    private List<Bloco> blocos = new ArrayList<>();
 
     @ManyToMany
     @JoinTable(name = "tb_atividade_participante",
